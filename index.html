@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal de Asistencia de Discipulados</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+      background-color: #f7f8fa;
+      color: #1f2328;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      padding: 48px 16px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: clamp(1.3rem, 5vw, 1.8rem);
+      font-weight: 700;
+      color: #1f2328;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #57606a;
+      max-width: 480px;
+      line-height: 1.6;
+    }
+
+    .courses-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      max-width: 560px;
+    }
+
+    .course-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .course-card:hover {
+      border-color: #3b82d4;
+      box-shadow: 0 0 0 3px rgba(59, 130, 212, 0.1);
+    }
+
+    .course-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .course-number {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #3b82d4;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .course-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1f2328;
+    }
+
+    .course-schedule {
+      font-size: 0.85rem;
+      color: #57606a;
+    }
+
+    .btn-register {
+      background-color: #3b82d4;
+      color: #ffffff;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-register:hover {
+      background-color: #2563b0;
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 0.8rem;
+      color: #57606a;
+      text-align: center;
+    }
+
+    /* ── Mobile (≤ 480px) ── */
+    @media (max-width: 480px) {
+      body {
+        padding: 32px 12px;
+      }
+
+      .course-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 16px 18px;
+      }
+
+      .btn-register {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.95rem;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portal de Asistencia de Discipulados</h1>
+    <p>Selecciona el curso al que deseas registrar tu asistencia haciendo clic en el botón correspondiente.</p>
+  </header>
+
+  <div class="courses-grid">
+
+    <div class="course-card">
+      <div class="course-info">
+        <span class="course-number">Curso 1</span>
+        <span class="course-name">Discipulado 1</span>
+        <span class="course-schedule">Jueves · 7:00 PM</span>
+      </div>
+      <a class="btn-register" href="#" target="_blank" rel="noopener noreferrer">
+        Registrar
+      </a>
+    </div>
+
+    <div class="course-card">
+      <div class="course-info">
+        <span class="course-number">Curso 2</span>
+        <span class="course-name">Discipulado 2</span>
+        <span class="course-schedule">Jueves · 6:00 PM</span>
+      </div>
+      <a class="btn-register" href="https://forms.cloud.microsoft/r/1jjDR6G0fe" target="_blank" rel="noopener noreferrer">
+        Registrar
+      </a>
+    </div>
+
+    <div class="course-card">
+      <div class="course-info">
+        <span class="course-number">Curso 3</span>
+        <span class="course-name">Discipulado 3</span>
+        <span class="course-schedule">Jueves · 7:00 PM</span>
+      </div>
+      <a class="btn-register" href="#" target="_blank" rel="noopener noreferrer">
+        Registrar
+      </a>
+    </div>
+
+    <div class="course-card">
+      <div class="course-info">
+        <span class="course-number">Curso 4</span>
+        <span class="course-name">Discipulado 4</span>
+        <span class="course-schedule">Jueves · 6:00 PM</span>
+      </div>
+      <a class="btn-register" href="#" target="_blank" rel="noopener noreferrer">
+        Registrar
+      </a>
+    </div>
+
+    <div class="course-card">
+      <div class="course-info">
+        <span class="course-number">Curso 5</span>
+        <span class="course-name">Discipulado 5</span>
+        <span class="course-schedule">Jueves · 7:00 PM</span>
+      </div>
+      <a class="btn-register" href="#" target="_blank" rel="noopener noreferrer">
+        Registrar
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    Para dudas o problemas con el registro, contacta a tu coordinador académico o al número 8836-1528.
+  </footer>
+
+</body>
+</html>
