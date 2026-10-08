@@ -1,4 +1,4 @@
-# mparrales123.github.io
+# oasisdefe.site.github.io
 
 A simple responsive webpage that provides company information and redirects users to external resources.
 
@@ -18,4 +18,4 @@ CSS3
 JavaScript
 
 Author:
-Mauricio Parra
+MParra
